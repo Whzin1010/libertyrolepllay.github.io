@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja - Envolved</title>
+  <link rel="stylesheet" href="./assets/css/loja.css">
+  <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
+  <meta name='keywords' content='mta, envolved roleplay , servidor de mta , servidor de mta envolved , envolved , envolved mta'>
+  <meta name="description" content="Site oficial do Envolved Roleplay, aqui você encontra todos os produtos e regras do nosso servidor. Venha escrever aqui sua própria história e realizar todos os seus sonhos em nossa cidade!">
+  <meta name='author' content='@eu.kramer'>
+  <meta name='copyright' content='Kramer, @eu.kramer'>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <div class="logo-nav">
+        <a href="./index.html"><img src="./assets/img/logo1.png" alt="logo principal da navegação Liberty"></a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="./index.html" rel="noopener noreferrer">Página Inicial</a>
+        </li>
+        <li class="nav-item">
+          <a href="./loja.html" rel="noopener noreferrer">Loja</a>
+        </li>
+        <li class="nav-item">
+          <a href="./equipe.html" rel="noopener noreferrer">Equipe</a>
+        </li>
+        <li class="nav-item">
+          <a href="./regras.html" rel="noopener noreferrer">Regras </a>
+        </li>
+      </ul>
+      <div class="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <!--Navbar-->
+  </header>
+  <!--Header-->
+  <main>
+    <section class="section-container">
+      <div class="title">
+        <h3>CORPORAÇÃO</h3>
+      </div>
+      <div class="container" id="corporacao"></div>
+    </section>
+    <section class="section-container">
+      <div class="title">
+        <h3>FACÇÃO</h3>
+      </div>
+      <div class="container" id="faccoes"></div>
+    </section>
+    <section class="section-container">
+      <div class="title">
+        <h3>OUTROS</h3>
+      </div>
+      <div class="container" id="outros"></div>
+    </section>
+  </main>
+  <script src="./assets/js/app.js"></script>
+  <script>
+    fetch('./produtos.json')
+      .then(response => response.json())
+      .then(data => {
+        const corporacao = document.getElementById('corporacao');
+        const faccoes = document.getElementById('faccoes');
+        const outros = document.getElementById('outros');
+        function createProductCard(produto) {
+          
+         
+          return `
+            <div class="card">
+              <div class="card-img">
+                <img src="./assets/img/bannerheader.png" alt="${produto.nome}">
+              </div>
+              <div class="card-descricao">
+                <h4>${produto.nome}</h4>
+                <h5>R$ ${produto.preco.toFixed(2).replace('.', ',')}</h5>
+                <a href="${produto.link}" target="_blank">COMPRAR</a>
+              </div>
+            </div>
+          `;
+        }
+        data.corporacao.forEach(produto => {
+          corporacao.innerHTML += createProductCard(produto);
+        });
+        data.faccoes.forEach(produto => {
+          faccoes.innerHTML += createProductCard(produto);
+        });
+        data.outros.forEach(produto => {
+          outros.innerHTML += createProductCard(produto);
+        });
+      })
+      .catch(error => console.error('Erro ao carregar produtos:', error));
+  </script>
+</body>
+
+</html>

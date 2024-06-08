@@ -1,0 +1,237 @@
+@media (max-width: 1024px) {
+    .container-main img {
+        display: none;
+    }
+}
+@media (max-width: 985px) {
+    /* FOOTER */
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .text-footer {
+        font-size: 1.5rem;
+    }
+
+
+.container-metodos-item{
+    display: flex;
+   
+    justify-content: center;
+}
+
+    .container-metodos-infor{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-metodos-infor span {
+       font-size: 1.3rem;
+       text-align: center;
+
+    }
+
+    .container-metodos-infor h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .container-metodos-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .link-rapido-pai a {
+        font-size: 1.5rem;
+    }
+
+    .icon-footer {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 785px) {
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: white;
+        gap: -10px;
+        transition: 0.3s;
+
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    /* header  */
+
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .main-filho h4 {
+        text-align: center;
+    }
+
+    .main-filho h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-right: 0;
+    }
+
+
+    /* main */
+
+    .container {
+        padding: 2rem 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 2rem;
+    }
+    .container p {
+        text-align: justify;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: -2rem 3rem;
+        
+    }
+    iframe {
+        border-radius: 10px;
+        margin: -2rem 3rem;
+      }
+
+
+      .text-h4 {
+        background: var(--bg-title);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0 auto;
+      }
+
+      .icon-item i {
+        font-size: 4rem;
+        margin-top: 20px;
+        padding: 15%;
+        background: #00ccff;
+        border: 1px solid black;
+        border-radius: 100%;
+        transition: all 0.5s;
+      }
+
+      .container-duvidas {
+        width: 100%;
+      }
+
+
+    /* FOOTER */
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .text-footer {
+        font-size: 1.5rem;
+    }
+
+
+.container-metodos-item{
+    display: flex;
+   
+    justify-content: center;
+}
+
+    .container-metodos-infor{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-metodos-infor span {
+       font-size: 1.5rem;
+       text-align: center;
+
+    }
+
+    .container-metodos-infor h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .container-metodos-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .link-rapido-pai a {
+        font-size: 1.5rem;
+    }
+
+    .icon-footer {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .main-text {
+        display: flex;
+    }
+
+    .main-text img {
+        width: 50px;
+    }
+}
+
+@media(max-width: 413px) {
+
+    iframe{
+       width: 390px;
+        
+    }
+}
